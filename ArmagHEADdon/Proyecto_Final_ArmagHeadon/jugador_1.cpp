@@ -20,7 +20,7 @@ jugador_1::jugador_1(int n)
 
     }
 
-    num_plane = n ;     //Asiganamos el valor del sprite del avion
+    num_plane = n ;     //Asiganamos el valor del sprite de la cabeza
 
     animacion = new QTimer() ;
 
