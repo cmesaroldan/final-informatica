@@ -12,6 +12,7 @@ SOURCES += \
     enemigos.cpp \
     fondo_niveles.cpp \
     juego.cpp \
+    jugador_1.cpp \
     main.cpp \
     mainwindow.cpp \
     proyectil.cpp \
@@ -21,6 +22,7 @@ HEADERS += \
     enemigos.h \
     fondo_niveles.h \
     juego.h \
+    jugador_1.h \
     mainwindow.h \
     proyectil.h \
     puntaje.h
