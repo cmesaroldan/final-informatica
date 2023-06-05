@@ -1,8 +1,0 @@
-<RCC>
-    <qresource prefix="/recursos">
-        <file>logo.png</file>
-        <file>Fondo-Menu.jpg</file>
-        <file>avn_p1.png</file>
-        <file>stage1.png</file>
-    </qresource>
-</RCC>
