@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 10.0.1, 2023-06-04T21:19:59. -->
+<!-- Written by QtCreator 10.0.1, 2023-06-06T22:38:05. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -80,6 +80,10 @@
     <valuelist type="QVariantList" key="ClangTools.SelectedFiles"/>
     <valuelist type="QVariantList" key="ClangTools.SuppressedDiagnostics"/>
     <value type="bool" key="ClangTools.UseGlobalSettings">true</value>
+   </valuemap>
+   <valuemap type="QVariantMap" key="ClangdSettings">
+    <value type="bool" key="blockIndexing">false</value>
+    <value type="bool" key="useGlobalSettings">true</value>
    </valuemap>
   </valuemap>
  </data>
@@ -236,8 +240,9 @@
     <valuelist type="QVariantList" key="CustomOutputParsers"/>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/Users/cmesa/Desktop/Juego Info/PROYECTO_FINAL_INFORMATICA2-main/Proyecto-final/PROYECTO_FINAL_INFORMATICA2.pro</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/cmesa/Desktop/Juego Info/PROYECTO_FINAL_INFORMATICA2-main/Proyecto-final/PROYECTO_FINAL_INFORMATICA2.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">PROYECTO_FINAL_INFORMATICA22</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/Users/cmesa/Desktop/JUEGO_ACTUAL/final-informatica-master/Proyecto_Final/PROYECTO_FINAL_INFORMATICA2.pro</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">C:/Users/cmesa/Desktop/JUEGO_ACTUAL/final-informatica-master/Proyecto_Final/PROYECTO_FINAL_INFORMATICA2.pro</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseLibrarySearchPath">true</value>

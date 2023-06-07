@@ -73,11 +73,11 @@ ui->aceptar->hide() ;
 
  //texto pregunta, nueva partida, cargar partida
 
-ui->texto1->setGeometry( 300 , 250 , 200 , 50 );
-ui->texto1->hide() ;
-ui->new_partida_txt->setGeometry( 283 , 200 , 230 , 50 ) ;
-ui->new_partida_txt->hide() ;
-ui->load_partida_txt->setGeometry( 283 , 200 , 230 , 50 ) ;
+//ui->texto1->setGeometry( 300 , 250 , 200 , 50 );
+//ui->texto1->hide() ;
+//ui->new_partida_txt->setGeometry( 283 , 200 , 230 , 50 ) ;
+//ui->new_partida_txt->hide() ;
+//ui->load_partida_txt->setGeometry( 283 , 200 , 230 , 50 ) ;
 
 ui->load_partida_txt->hide() ;
 
@@ -355,8 +355,8 @@ void MainWindow::Guardar_nuevo_jugador(){
                    ui->cargar_partida->hide() ;
                    ui->agregar_nombre->hide() ;
                    ui->aceptar->hide() ;
-                   ui->texto1->hide() ;
-                   ui->new_partida_txt->hide() ;
+                   //ui->texto1->hide() ;
+                   //ui->new_partida_txt->hide() ;
 
                    ui->load_partida_txt->hide() ;
 
@@ -418,9 +418,9 @@ void MainWindow::Guardar_nuevo_jugador(){
 
                               ui->agregar_nombre->show() ;
                               ui->aceptar->show() ;
-                              ui->texto1->show() ;
+                              //ui->texto1->show() ;
 
-                              ui->new_partida_txt->show() ;
+                              //ui->new_partida_txt->show() ;
 
                               ui->avn1->show() ;
 
@@ -452,7 +452,7 @@ void MainWindow::Guardar_nuevo_jugador(){
                    switch ( GAME->val_btn_presionado ){
                        case 0:{        //1 jugador
                            ui->load_partida_txt->show() ;
-                           ui->texto1->show() ;
+                           //ui->texto1->show() ;
                            ui->aceptar->show() ;
                            ui->agregar_nombre->show() ;
                            GAME->condicion_aceptar = false ;
@@ -466,7 +466,7 @@ void MainWindow::Guardar_nuevo_jugador(){
 
                    ui->aceptar->hide() ;
 
-                   ui->texto1->hide() ;
+                   //ui->texto1->hide() ;
 
                    ui->regresar->hide() ;
 
@@ -475,7 +475,7 @@ void MainWindow::Guardar_nuevo_jugador(){
                    msc_2->play() ;
 
                    ui->graphicsView->setBackgroundBrush( Qt::black ) ;
-                   ui->new_partida_txt->hide() ;
+                   //ui->new_partida_txt->hide() ;
 
                    ui->load_partida_txt->hide() ;
                        ui->avn1->hide() ;
@@ -554,7 +554,7 @@ void MainWindow::Guardar_nuevo_jugador(){
                }
                void MainWindow::nivel_1(){     //Funcion para el nivel 1
                  GAME->set_level_one() ;
-                 ui->graphicsView->setScene( GAME->level_one );
+                 ui->graphicsView->setScene( GAME->nivel_uno );
 
                  end_game = new QTimer() ;
 
@@ -582,11 +582,11 @@ void MainWindow::Guardar_nuevo_jugador(){
 
                      nombre_jugador->whos_playing( GAME->nombre_jugador ) ;
 
-                     GAME->level_one->addItem( puntuacion ) ;
+                     GAME->nivel_uno->addItem( puntuacion ) ;
 
-                     GAME->level_one->addItem( nombre_jugador ) ;
+                     GAME->nivel_uno->addItem( nombre_jugador ) ;
 
-                     GAME->level_one->addItem( health ) ;
+                     GAME->nivel_uno->addItem( health ) ;
 
                      QTimer::singleShot( 60000 , this, SLOT( update_nivel() ) );     //cada nivel dura 1 minuto
 
@@ -605,27 +605,27 @@ void MainWindow::Guardar_nuevo_jugador(){
 
                        if( teclas->key() == Qt::Key_W ){                   //Arriba
 
-                           GAME->Main_player->movimientos_personaje( 0 ) ;
+                           GAME->jugador->movimientos_personaje( 0 ) ;
                        }
                        else if( teclas->key() == Qt::Key_S ){                  //Abajo
 
-                           GAME->Main_player->movimientos_personaje( 1 ) ;
+                           GAME->jugador->movimientos_personaje( 1 ) ;
                        }
                        else if( teclas->key() == Qt::Key_A ){                      //Izquierda
 
-                           GAME->Main_player->movimientos_personaje( 2 ) ;
+                           GAME->jugador->movimientos_personaje( 2 ) ;
                        }
                        else if( teclas->key() == Qt::Key_D ){                      //Derecha
 
-                           GAME->Main_player->movimientos_personaje( 3 ) ;
+                           GAME->jugador->movimientos_personaje( 3 ) ;
                        }
                        else if( teclas->key() == Qt::Key_E ){                  //Diagonal derecha - arriba
 
-                           GAME->Main_player->movimientos_personaje( 4 ) ;
+                           GAME->jugador->movimientos_personaje( 4 ) ;
                        }
                        else if( teclas->key() == Qt::Key_Q ){                      //Diagonal izquierda - Abajo
 
-                           GAME->Main_player->movimientos_personaje( 5 ) ;
+                           GAME->jugador->movimientos_personaje( 5 ) ;
 
                        }
                        else if( teclas->key() == Qt::Key_Space ){          //Disparar
@@ -732,7 +732,7 @@ void MainWindow::Guardar_nuevo_jugador(){
                        ENEmigos->setPos( 800 , random_num2 ) ;
                    }
 
-                   GAME->level_one->addItem( ENEmigos ) ;
+                   GAME->nivel_uno->addItem( ENEmigos ) ;
 
 
 
@@ -784,11 +784,11 @@ void MainWindow::Guardar_nuevo_jugador(){
 
                            ending_theme->play() ;
 
-                           GAME->Main_player->caida_libre->stop() ;
+                           GAME->jugador->caida_libre->stop() ;
 
-                           GAME->Main_player->animacion->stop() ;
+                           GAME->jugador->animacion->stop() ;
 
-                           GAME->backg_screen->cambiar_frame->stop() ;
+                           GAME->fondo_juego->cambiar_frame->stop() ;
 
                            ui->Salir->show() ;
 
@@ -812,20 +812,20 @@ void MainWindow::Guardar_nuevo_jugador(){
 
                void MainWindow::borrar_cambio_escena(){
 
-                   GAME->Main_player->caida_libre->stop() ;
+                   GAME->jugador->caida_libre->stop() ;
 
-                   GAME->Main_player->animacion->stop() ;
+                   GAME->jugador->animacion->stop() ;
 
                    ENEmigos->timer_enemy->stop() ;
 
-                   GAME->level_one->removeItem( GAME->Main_player ) ;
+                   GAME->nivel_uno->removeItem( GAME->jugador ) ;
 
-                   GAME->backg_screen->cambiar_frame->stop() ;
+                   GAME->fondo_juego->cambiar_frame->stop() ;
 
-                   GAME->level_one->removeItem( GAME->backg_screen ) ;
+                   GAME->nivel_uno->removeItem( GAME->fondo_juego ) ;
 
 
-                   delete GAME->backg_screen ;
+                   delete GAME->fondo_juego ;
 
 
                    GAME->Revisar_game_over->stop() ;
@@ -834,10 +834,10 @@ void MainWindow::Guardar_nuevo_jugador(){
                    delete GAME->Revisar_game_over ;
 
 
-                   GAME->level_one->clear() ;
+                   GAME->nivel_uno->clear() ;
 
 
-                   delete GAME->level_one ;
+                   delete GAME->nivel_uno ;
 
 
                    end_game->stop() ;
@@ -871,7 +871,7 @@ void MainWindow::Guardar_nuevo_jugador(){
 
                    GAME->set_level_one() ;
 
-                   ui->graphicsView->setScene( GAME->level_one );
+                   ui->graphicsView->setScene( GAME->nivel_uno );
 
                    end_game = new QTimer() ;
 
@@ -903,11 +903,11 @@ void MainWindow::Guardar_nuevo_jugador(){
 
                    nombre_jugador->whos_playing( GAME->nombre_jugador ) ;
 
-                   GAME->level_one->addItem( puntuacion ) ;
+                   GAME->nivel_uno->addItem( puntuacion ) ;
 
-                   GAME->level_one->addItem( nombre_jugador ) ;
+                   GAME->nivel_uno->addItem( nombre_jugador ) ;
 
-                   GAME->level_one->addItem( health ) ;
+                   GAME->nivel_uno->addItem( health ) ;
 
                    QTimer::singleShot( 60000 , this, SLOT( change_player_multiP() ) );
 
@@ -951,7 +951,7 @@ void MainWindow::Guardar_nuevo_jugador(){
 
                        GAME->set_level_one() ;
 
-                       ui->graphicsView->setScene( GAME->level_one );
+                       ui->graphicsView->setScene( GAME->nivel_uno );
 
                        end_game = new QTimer() ;
 
@@ -979,11 +979,11 @@ void MainWindow::Guardar_nuevo_jugador(){
 
                        nombre_jugador->whos_playing( GAME->nombre_jugador ) ;
 
-                       GAME->level_one->addItem( puntuacion ) ;
+                       GAME->nivel_uno->addItem( puntuacion ) ;
 
-                       GAME->level_one->addItem( nombre_jugador ) ;
+                       GAME->nivel_uno->addItem( nombre_jugador ) ;
 
-                       GAME->level_one->addItem( health ) ;
+                       GAME->nivel_uno->addItem( health ) ;
 
                        QTimer::singleShot( 60000 , this, SLOT( final_multiP() ) );
 

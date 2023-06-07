@@ -41,9 +41,9 @@ private:
 
     QPixmap sprites1, enemy ;
 
-    int tX , tY , n, shoot , T = 30 ;
+    int tX =0 , tY = 0 , n, shoot , T = 30 ;
 
-    unsigned long long t_disc=0 ,t_disc1 = 0;
+    unsigned long long t_disc = 1 ,t_disc1 = 1;
 
     bool collide = true ;
 

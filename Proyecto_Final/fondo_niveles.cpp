@@ -1,20 +1,21 @@
 
 #include "fondo_niveles.h"
 
-Fondo_niveles::Fondo_niveles( int n_level ){
+Fondo_niveles::Fondo_niveles( int n_level ){ //SE DEFINE EL CONSTRUCTOR DE LA CLASE
+
 
 
     cambiar_frame = new QTimer() ;
 
     connect( cambiar_frame , SIGNAL( timeout() ) , this , SLOT( frames() ) ) ;
 
-    int milsec = 1 ;
+    int milsec = 1 ; //Tiempo para que corra cada frame
 
     if( n_level == 1 ){             //Se Cargan las imagenes de cada nivel
 
        escenario_1.load(":/Recursos/stage1.png") ;
 
-       milsec = 100 ;
+       milsec = 200 ;
 
     }
     else if( n_level == 2 ){

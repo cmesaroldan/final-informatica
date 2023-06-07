@@ -6,8 +6,8 @@ extern puntaje *health ;
 
 Jugador_1::Jugador_1( int n ){
 
-   //n == 1 ->Personaje 1 ; n== 2 -> personaje 2
-    switch( n ){            //Alistamos los recursos necesarios para el sprite del jugador
+
+    switch( n ){
      case 1:{ sprite_jugador.load(":/Recursos/avn_p1.png") ;
 
     }break;
@@ -19,7 +19,7 @@ Jugador_1::Jugador_1( int n ){
 
         }
 
-        num_av = n ;     //Asiganamos el valor del sprite del personaje
+        cara_1 = n ;     //Asiganamos el valor del sprite del personaje
 
         animacion = new QTimer() ;
 
@@ -67,7 +67,7 @@ Jugador_1::Jugador_1( int n ){
 
         }
 
-        set_imagen_jugador( num_av ) ;
+        set_imagen_jugador( cara_1 ) ;
 
     }
 

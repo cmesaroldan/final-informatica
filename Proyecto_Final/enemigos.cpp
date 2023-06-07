@@ -47,7 +47,7 @@ enemigos::enemigos( int n_enemy, int nivel ){
 
     }
 
-    if(n!=0 && shoot==1) // Solo disparan los enemigos 1 y 2, los enemigos 0, no lo hacen
+    if(n==2 && shoot==1) // Solo disparan los enemigos 1 y 2, los enemigos 0, no lo hacen
 
     {
         bala_enemy= new QTimer;
@@ -106,7 +106,7 @@ void enemigos::movimiento_enemigos(){
 
             puntuacion->aumentar_puntaje( n ) ;
 
-            explosion->play() ;
+            explosion->play();
 
             scene()->removeItem( colisiones[i] ) ; //removeItem, para remover del escenario
 
@@ -150,7 +150,7 @@ void enemigos::movimiento_enemigos(){
 
     //Movimientos definidos apartir de números aleatorios previos
 
-    else if( n == 2 || n == 1){
+     if( n == 2 || n == 1){
 
         double pos_x=0;
         double pos_y=0;
@@ -172,10 +172,7 @@ void enemigos::movimiento_enemigos(){
             pos_x = 8*qCos(4*t_disc*(0.001*T));
 
             pos_y = 8*qSin( 4*t_disc*(0.001*T) ) ;
-            if(t_disc==45)
-            {
-                t_disc=0;
-            }
+
 
         }
         else if(amplitud==2)
@@ -184,10 +181,7 @@ void enemigos::movimiento_enemigos(){
 
             pos_y = 10*qSin( 4*t_disc*(0.001*T) ) ;
 
-            if(t_disc==45)
-            {
-                t_disc=0;
-            }
+
         }
 
         t_disc++;
